@@ -15,8 +15,9 @@ find_package(catkin REQUIRED COMPONENTS
     roslib
     )
 
-#find_package(OpenCV)
-include(/home/dji/opencv/build/OpenCVConfig.cmake)
+find_package(OpenCV)
+message(WARNING "OpenCV_VERSION: ${OpenCV_VERSION}")
+# include(/home/dji/opencv/build/OpenCVConfig.cmake)
 
 
 find_package(Ceres REQUIRED)
