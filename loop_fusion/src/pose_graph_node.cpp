@@ -1,7 +1,7 @@
 /*******************************************************
  * Copyright (C) 2019, Aerial Robotics Group, Hong Kong University of Science and Technology
  * 
- * This file is part of VINS.
+ * This file is part of vin_s_gpu.
  * 
  * Licensed under the GNU General Public License v3.0;
  * you may not use this file except in compliance with the License.
@@ -66,7 +66,7 @@ ros::Publisher pub_odometry_rect;
 
 std::string BRIEF_PATTERN_FILE;
 std::string POSE_GRAPH_SAVE_PATH;
-std::string VINS_RESULT_PATH;
+std::string vin_s_gpu_RESULT_PATH;
 CameraPoseVisualization cameraposevisual(1, 0, 0, 1);
 Eigen::Vector3d last_t(-100, -100, -100);
 double last_image_time = -1;
@@ -412,7 +412,7 @@ int main(int argc, char **argv)
     {
         printf("please intput: rosrun loop_fusion loop_fusion_node [config file] \n"
                "for example: rosrun loop_fusion loop_fusion_node "
-               "/home/tony-ws1/catkin_ws/src/VINS-Fusion/config/euroc/euroc_stereo_imu_config.yaml \n");
+               "/home/tony-ws1/catkin_ws/src/vin_s_gpu-Fusion/config/euroc/euroc_stereo_imu_config.yaml \n");
         return 0;
     }
     
@@ -451,12 +451,12 @@ int main(int argc, char **argv)
 
     fsSettings["image0_topic"] >> IMAGE_TOPIC;        
     fsSettings["pose_graph_save_path"] >> POSE_GRAPH_SAVE_PATH;
-    fsSettings["output_path"] >> VINS_RESULT_PATH;
+    fsSettings["output_path"] >> vin_s_gpu_RESULT_PATH;
     fsSettings["save_image"] >> DEBUG_IMAGE;
 
     LOAD_PREVIOUS_POSE_GRAPH = fsSettings["load_previous_pose_graph"];
-    VINS_RESULT_PATH = VINS_RESULT_PATH + "/vio_loop.csv";
-    std::ofstream fout(VINS_RESULT_PATH, std::ios::out);
+    vin_s_gpu_RESULT_PATH = vin_s_gpu_RESULT_PATH + "/vio_loop.csv";
+    std::ofstream fout(vin_s_gpu_RESULT_PATH, std::ios::out);
     fout.close();
 
     int USE_IMU = fsSettings["imu"];
@@ -478,12 +478,12 @@ int main(int argc, char **argv)
         load_flag = 1;
     }
 
-    ros::Subscriber sub_vio = n.subscribe("/vins_estimator/odometry", 2000, vio_callback);
+    ros::Subscriber sub_vio = n.subscribe("/vin_s_gpu_estimator/odometry", 2000, vio_callback);
     ros::Subscriber sub_image = n.subscribe(IMAGE_TOPIC, 2000, image_callback);
-    ros::Subscriber sub_pose = n.subscribe("/vins_estimator/keyframe_pose", 2000, pose_callback);
-    ros::Subscriber sub_extrinsic = n.subscribe("/vins_estimator/extrinsic", 2000, extrinsic_callback);
-    ros::Subscriber sub_point = n.subscribe("/vins_estimator/keyframe_point", 2000, point_callback);
-    ros::Subscriber sub_margin_point = n.subscribe("/vins_estimator/margin_cloud", 2000, margin_point_callback);
+    ros::Subscriber sub_pose = n.subscribe("/vin_s_gpu_estimator/keyframe_pose", 2000, pose_callback);
+    ros::Subscriber sub_extrinsic = n.subscribe("/vin_s_gpu_estimator/extrinsic", 2000, extrinsic_callback);
+    ros::Subscriber sub_point = n.subscribe("/vin_s_gpu_estimator/keyframe_point", 2000, point_callback);
+    ros::Subscriber sub_margin_point = n.subscribe("/vin_s_gpu_estimator/margin_cloud", 2000, margin_point_callback);
 
     pub_match_img = n.advertise<sensor_msgs::Image>("match_image", 1000);
     pub_camera_pose_visual = n.advertise<visualization_msgs::MarkerArray>("camera_pose_visual", 1000);

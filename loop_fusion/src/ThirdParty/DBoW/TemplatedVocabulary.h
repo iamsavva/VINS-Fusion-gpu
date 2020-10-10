@@ -25,10 +25,10 @@
 
 #include "../DUtils/DUtils.h"
 
-// Added by VINS [[[
+// Added by vin_s_gpu [[[
 #include "../VocabularyBinary.hpp"
 #include <boost/dynamic_bitset.hpp>
-// Added by VINS ]]]
+// Added by vin_s_gpu ]]]
 
 namespace DBoW2 {
 
@@ -257,9 +257,9 @@ public:
   virtual void load(const cv::FileStorage &fs, 
     const std::string &name = "vocabulary");
     
-  // Added by VINS [[[
+  // Added by vin_s_gpu [[[
   virtual void loadBin(const std::string &filename);
-  // Added by VINS ]]]
+  // Added by vin_s_gpu ]]]
     
   /** 
    * Stops those words whose weight is below minWeight.
@@ -434,10 +434,10 @@ TemplatedVocabulary<TDescriptor,F>::TemplatedVocabulary
   (const std::string &filename): m_scoring_object(NULL)
 {
     //m_scoring = KL;
-    // Changed by VINS [[[
+    // Changed by vin_s_gpu [[[
     //printf("loop start load bin\n");
     loadBin(filename);
-    // Changed by VINS ]]]
+    // Changed by vin_s_gpu ]]]
 }
 
 // --------------------------------------------------------------------------
@@ -447,10 +447,10 @@ TemplatedVocabulary<TDescriptor,F>::TemplatedVocabulary
   (const char *filename): m_scoring_object(NULL)
 {
     //m_scoring = KL;
-    // Changed by VINS [[[
+    // Changed by vin_s_gpu [[[
     //printf("loop start load bin\n");
     loadBin(filename);
-    // Changed by VINS ]]]
+    // Changed by vin_s_gpu ]]]
 }
 
 // --------------------------------------------------------------------------
@@ -1504,7 +1504,7 @@ void TemplatedVocabulary<TDescriptor,F>::load(const cv::FileStorage &fs,
   }
 }
     
-// Added by VINS [[[
+// Added by vin_s_gpu [[[
 template<class TDescriptor, class F>
 void TemplatedVocabulary<TDescriptor,F>::loadBin(const std::string &filename) {
     
@@ -1512,7 +1512,7 @@ void TemplatedVocabulary<TDescriptor,F>::loadBin(const std::string &filename) {
   m_nodes.clear();
   //printf("loop load bin\n");
   std::ifstream ifStream(filename);
-  VINSLoop::Vocabulary voc;
+  vin_s_gpuLoop::Vocabulary voc;
   voc.deserialize(ifStream);
   ifStream.close();
   
@@ -1560,7 +1560,7 @@ void TemplatedVocabulary<TDescriptor,F>::loadBin(const std::string &filename) {
   }
 }
     
-// Added by VINS ]]]
+// Added by vin_s_gpu ]]]
 
 // --------------------------------------------------------------------------
 

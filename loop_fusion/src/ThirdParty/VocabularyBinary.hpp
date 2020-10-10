@@ -5,7 +5,7 @@
 #include <fstream>
 #include <string>
 
-namespace VINSLoop {
+namespace vin_s_gpuLoop {
     
 struct Node {
     int32_t nodeId;

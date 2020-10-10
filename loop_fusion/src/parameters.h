@@ -1,7 +1,7 @@
 /*******************************************************
  * Copyright (C) 2019, Aerial Robotics Group, Hong Kong University of Science and Technology
  * 
- * This file is part of VINS.
+ * This file is part of vin_s_gpu.
  * 
  * Licensed under the GNU General Public License v3.0;
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ extern std::string BRIEF_PATTERN_FILE;
 extern std::string POSE_GRAPH_SAVE_PATH;
 extern int ROW;
 extern int COL;
-extern std::string VINS_RESULT_PATH;
+extern std::string vin_s_gpu_RESULT_PATH;
 extern int DEBUG_IMAGE;
 
 
