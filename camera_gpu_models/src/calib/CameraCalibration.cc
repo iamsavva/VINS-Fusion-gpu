@@ -11,11 +11,11 @@
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/calib3d/calib3d.hpp>
 
-#include "camodocal/camera_models/CameraFactory.h"
+#include "camodocal/camera_gpu_models/CameraFactory.h"
 #include "camodocal/sparse_graph/Transform.h"
 #include "camodocal/gpl/EigenQuaternionParameterization.h"
 #include "camodocal/gpl/EigenUtils.h"
-#include "camodocal/camera_models/CostFunctionFactory.h"
+#include "camodocal/camera_gpu_models/CostFunctionFactory.h"
 
 #include "ceres/ceres.h"
 namespace camodocal

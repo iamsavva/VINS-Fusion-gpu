@@ -1,4 +1,4 @@
-#include "camodocal/camera_models/CataCamera.h"
+#include "camodocal/camera_gpu_models/CataCamera.h"
 
 #include <cmath>
 #include <cstdio>

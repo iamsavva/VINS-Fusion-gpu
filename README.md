@@ -128,7 +128,7 @@ Green path is VIO odometry; blue path is odometry under GPS global fusion.
 ```
     roslaunch vin_s_gpu vin_s_gpu_rviz.launch
     rosrun vin_s_gpu kitti_gps_test ~/catkin_ws/src/vin_s_gpu-Fusion/config/kitti_raw/kitti_10_03_config.yaml YOUR_DATASET_FOLDER/2011_10_03_drive_0027_sync/ 
-    rosrun global_fusion global_fusion_node
+    rosrun global_gpu_fusion global_gpu_fusion_node
 ```
 
 <img src="https://github.com/HKUST-Aerial-Robotics/vin_s_gpu-Fusion/blob/master/support_files/image/kitti.gif" width = 430 height = 240 />
@@ -154,10 +154,10 @@ VIO is not only a software algorithm, it heavily relies on hardware quality. For
 Write a config file for your device. You can take config files of EuRoC and KITTI as the example. 
 
 ### 6.2 Camera calibration
-vin_s_gpu-Fusion support several camera models (pinhole, mei, equidistant). You can use [camera model](https://github.com/hengli/camodocal) to calibrate your cameras. We put some example data under /camera_models/calibrationdata to tell you how to calibrate.
+vin_s_gpu-Fusion support several camera models (pinhole, mei, equidistant). You can use [camera model](https://github.com/hengli/camodocal) to calibrate your cameras. We put some example data under /camera_gpu_models/calibrationdata to tell you how to calibrate.
 ```
-cd ~/catkin_ws/src/vin_s_gpu-Fusion/camera_models/camera_calib_example/
-rosrun camera_models Calibrations -w 12 -h 8 -s 80 -i calibrationdata --camera-model pinhole
+cd ~/catkin_ws/src/vin_s_gpu-Fusion/camera_gpu_models/camera_calib_example/
+rosrun camera_gpu_models Calibrations -w 12 -h 8 -s 80 -i calibrationdata --camera-model pinhole
 ```
 
 

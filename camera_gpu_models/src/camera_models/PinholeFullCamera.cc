@@ -1,4 +1,4 @@
-#include "camodocal/camera_models/PinholeFullCamera.h"
+#include "camodocal/camera_gpu_models/PinholeFullCamera.h"
 
 #include <cmath>
 #include <cstdio>

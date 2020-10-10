@@ -1,4 +1,4 @@
-#include "camodocal/camera_models/ScaramuzzaCamera.h"
+#include "camodocal/camera_gpu_models/ScaramuzzaCamera.h"
 
 #include <cmath>
 #include <cstdio>

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(global_fusion)
+project(global_gpu_fusion)
 
 set(CMAKE_BUILD_TYPE "Release")
 set(CMAKE_CXX_FLAGS "-std=c++11")
@@ -26,8 +26,8 @@ include_directories(
 catkin_package()
 
 
-add_executable(global_fusion_node 
+add_executable(global_gpu_fusion_node 
 	src/globalOptNode.cpp
 	src/globalOpt.cpp)
 
-target_link_libraries(global_fusion_node ${catkin_LIBRARIES} ${CERES_LIBRARIES} libGeographiccc) 
+target_link_libraries(global_gpu_fusion_node ${catkin_LIBRARIES} ${CERES_LIBRARIES} libGeographiccc) 

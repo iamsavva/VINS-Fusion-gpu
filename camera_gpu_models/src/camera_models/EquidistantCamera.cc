@@ -1,4 +1,4 @@
-#include "camodocal/camera_models/EquidistantCamera.h"
+#include "camodocal/camera_gpu_models/EquidistantCamera.h"
 
 #include <cmath>
 #include <cstdio>

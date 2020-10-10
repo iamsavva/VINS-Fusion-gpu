@@ -3,7 +3,7 @@
 
 #include <opencv2/core/core.hpp>
 
-#include "camodocal/camera_models/Camera.h"
+#include "camodocal/camera_gpu_models/Camera.h"
 
 namespace camodocal
 {

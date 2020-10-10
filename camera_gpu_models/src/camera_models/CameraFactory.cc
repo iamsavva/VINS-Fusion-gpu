@@ -1,12 +1,12 @@
-#include "camodocal/camera_models/CameraFactory.h"
+#include "camodocal/camera_gpu_models/CameraFactory.h"
 
 #include <boost/algorithm/string.hpp>
 
-#include "camodocal/camera_models/CataCamera.h"
-#include "camodocal/camera_models/EquidistantCamera.h"
-#include "camodocal/camera_models/PinholeCamera.h"
-#include "camodocal/camera_models/PinholeFullCamera.h"
-#include "camodocal/camera_models/ScaramuzzaCamera.h"
+#include "camodocal/camera_gpu_models/CataCamera.h"
+#include "camodocal/camera_gpu_models/EquidistantCamera.h"
+#include "camodocal/camera_gpu_models/PinholeCamera.h"
+#include "camodocal/camera_gpu_models/PinholeFullCamera.h"
+#include "camodocal/camera_gpu_models/ScaramuzzaCamera.h"
 
 #include "ceres/ceres.h"
 

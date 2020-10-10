@@ -22,9 +22,9 @@
 #include <opencv2/cudaimgproc.hpp>
 #include <opencv2/cudaarithm.hpp>
 
-#include "camodocal/camera_models/CameraFactory.h"
-#include "camodocal/camera_models/CataCamera.h"
-#include "camodocal/camera_models/PinholeCamera.h"
+#include "camodocal/camera_gpu_models/CameraFactory.h"
+#include "camodocal/camera_gpu_models/CataCamera.h"
+#include "camodocal/camera_gpu_models/PinholeCamera.h"
 #include "../estimator/parameters.h"
 #include "../utility/tic_toc.h"
 

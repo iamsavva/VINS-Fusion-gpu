@@ -11,9 +11,9 @@
 
 #pragma once
 
-#include "camodocal/camera_models/CameraFactory.h"
-#include "camodocal/camera_models/CataCamera.h"
-#include "camodocal/camera_models/PinholeCamera.h"
+#include "camodocal/camera_gpu_models/CameraFactory.h"
+#include "camodocal/camera_gpu_models/CataCamera.h"
+#include "camodocal/camera_gpu_models/PinholeCamera.h"
 #include <eigen3/Eigen/Dense>
 #include <ros/ros.h>
 #include <sensor_msgs/Image.h>
