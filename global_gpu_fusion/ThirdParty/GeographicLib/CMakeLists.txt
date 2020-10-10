@@ -31,6 +31,6 @@ include_directories(
   ./include/
 )
 
-add_library(libGeographiccc src/LocalCartesian.cpp
+add_library(lib_gpu_Geographiccc src/LocalCartesian.cpp
                           src/Geocentric.cpp
                           src/Math.cpp)

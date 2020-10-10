@@ -30,4 +30,4 @@ add_executable(global_gpu_fusion_node
 	src/globalOptNode.cpp
 	src/globalOpt.cpp)
 
-target_link_libraries(global_gpu_fusion_node ${catkin_LIBRARIES} ${CERES_LIBRARIES} libGeographiccc) 
+target_link_libraries(global_gpu_fusion_node ${catkin_LIBRARIES} ${CERES_LIBRARIES} lib_gpu_Geographiccc) 
