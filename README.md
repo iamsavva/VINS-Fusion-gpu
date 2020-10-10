@@ -5,7 +5,7 @@ The essential software environment is same as vin_s_gpu-Fusion. Besides, it requ
 ## 2. Usage
 ### 2.1 Change the opencv path in the CMakeLists
 In /vin_s_gpu_estimator/CMakeLists.txt, change Line 20 to your path.  
-In /loop_fusion/CmakeLists.txt, change Line 19 to your path.
+In /loop_gpu_fusion/CmakeLists.txt, change Line 19 to your path.
 ### 2.2 Change the acceleration parameters as you need.
 In the config file, there are two parameters for gpu acceleration.  
 use_gpu: 0 for off, 1 for on  
@@ -86,7 +86,7 @@ Green path is VIO odometry; red path is odometry under visual loop closure.
 ```
     roslaunch vin_s_gpu vin_s_gpu_rviz.launch
     rosrun vin_s_gpu vin_s_gpu_node ~/catkin_ws/src/vin_s_gpu-Fusion/config/euroc/euroc_mono_imu_config.yaml 
-    (optional) rosrun loop_fusion loop_fusion_node ~/catkin_ws/src/vin_s_gpu-Fusion/config/euroc/euroc_mono_imu_config.yaml 
+    (optional) rosrun loop_gpu_fusion loop_gpu_fusion_node ~/catkin_ws/src/vin_s_gpu-Fusion/config/euroc/euroc_mono_imu_config.yaml 
     rosbag play YOUR_DATASET_FOLDER/MH_01_easy.bag
 ```
 
@@ -95,7 +95,7 @@ Green path is VIO odometry; red path is odometry under visual loop closure.
 ```
     roslaunch vin_s_gpu vin_s_gpu_rviz.launch
     rosrun vin_s_gpu vin_s_gpu_node ~/catkin_ws/src/vin_s_gpu-Fusion/config/euroc/euroc_stereo_imu_config.yaml 
-    (optional) rosrun loop_fusion loop_fusion_node ~/catkin_ws/src/vin_s_gpu-Fusion/config/euroc/euroc_stereo_imu_config.yaml 
+    (optional) rosrun loop_gpu_fusion loop_gpu_fusion_node ~/catkin_ws/src/vin_s_gpu-Fusion/config/euroc/euroc_stereo_imu_config.yaml 
     rosbag play YOUR_DATASET_FOLDER/MH_01_easy.bag
 ```
 
@@ -104,7 +104,7 @@ Green path is VIO odometry; red path is odometry under visual loop closure.
 ```
     roslaunch vin_s_gpu vin_s_gpu_rviz.launch
     rosrun vin_s_gpu vin_s_gpu_node ~/catkin_ws/src/vin_s_gpu-Fusion/config/euroc/euroc_stereo_config.yaml 
-    (optional) rosrun loop_fusion loop_fusion_node ~/catkin_ws/src/vin_s_gpu-Fusion/config/euroc/euroc_stereo_config.yaml 
+    (optional) rosrun loop_gpu_fusion loop_gpu_fusion_node ~/catkin_ws/src/vin_s_gpu-Fusion/config/euroc/euroc_stereo_config.yaml 
     rosbag play YOUR_DATASET_FOLDER/MH_01_easy.bag
 ```
 
@@ -118,7 +118,7 @@ Open two terminals, run vin_s_gpu and rviz respectively.
 (We evaluated odometry on KITTI benchmark without loop closure funtion)
 ```
     roslaunch vin_s_gpu vin_s_gpu_rviz.launch
-    (optional) rosrun loop_fusion loop_fusion_node ~/catkin_ws/src/vin_s_gpu-Fusion/config/kitti_odom/kitti_config00-02.yaml
+    (optional) rosrun loop_gpu_fusion loop_gpu_fusion_node ~/catkin_ws/src/vin_s_gpu-Fusion/config/kitti_odom/kitti_config00-02.yaml
     rosrun vin_s_gpu kitti_odom_test ~/catkin_ws/src/vin_s_gpu-Fusion/config/kitti_odom/kitti_config00-02.yaml YOUR_DATASET_FOLDER/sequences/00/ 
 ```
 ### 4.2 KITTI GPS Fusion (Stereo + GPS)
@@ -140,7 +140,7 @@ Green path is VIO odometry; red path is odometry under visual loop closure.
 ```
     roslaunch vin_s_gpu vin_s_gpu_rviz.launch
     rosrun vin_s_gpu vin_s_gpu_node ~/catkin_ws/src/vin_s_gpu-Fusion/config/vi_car/vi_car.yaml 
-    (optional) rosrun loop_fusion loop_fusion_node ~/catkin_ws/src/vin_s_gpu-Fusion/config/vi_car/vi_car.yaml 
+    (optional) rosrun loop_gpu_fusion loop_gpu_fusion_node ~/catkin_ws/src/vin_s_gpu-Fusion/config/vi_car/vi_car.yaml 
     rosbag play YOUR_DATASET_FOLDER/car.bag
 ```
 

@@ -399,7 +399,7 @@ void command()
 
 int main(int argc, char **argv)
 {
-    ros::init(argc, argv, "loop_fusion");
+    ros::init(argc, argv, "loop_gpu_fusion");
     ros::NodeHandle n("~");
     posegraph.registerPub(n);
     
@@ -410,8 +410,8 @@ int main(int argc, char **argv)
 
     if(argc != 2)
     {
-        printf("please intput: rosrun loop_fusion loop_fusion_node [config file] \n"
-               "for example: rosrun loop_fusion loop_fusion_node "
+        printf("please intput: rosrun loop_gpu_fusion loop_gpu_fusion_node [config file] \n"
+               "for example: rosrun loop_gpu_fusion loop_gpu_fusion_node "
                "/home/tony-ws1/catkin_ws/src/vin_s_gpu-Fusion/config/euroc/euroc_stereo_imu_config.yaml \n");
         return 0;
     }
@@ -433,7 +433,7 @@ int main(int argc, char **argv)
 
     ROW = fsSettings["image_height"];
     COL = fsSettings["image_width"];
-    std::string pkg_path = ros::package::getPath("loop_fusion");
+    std::string pkg_path = ros::package::getPath("loop_gpu_fusion");
     string vocabulary_file = pkg_path + "/../support_files/brief_k10L6.bin";
     cout << "vocabulary_file" << vocabulary_file << endl;
     posegraph.loadVocabulary(vocabulary_file);
