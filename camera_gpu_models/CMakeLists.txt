@@ -33,7 +33,7 @@ include_directories(
 
 include_directories("include")
 
-add_executable(Calibrations 
+add_executable(Calibrations_gpu 
     src/intrinsic_calib.cc
     src/chessboard/Chessboard.cc
     src/calib/CameraCalibration.cc
@@ -64,5 +64,5 @@ add_library(camera_gpu_models
     src/gpl/gpl.cc
     src/gpl/EigenQuaternionParameterization.cc)
 
-target_link_libraries(Calibrations ${Boost_LIBRARIES} ${OpenCV_LIBS} ${CERES_LIBRARIES})
+target_link_libraries(Calibrations_gpu ${Boost_LIBRARIES} ${OpenCV_LIBS} ${CERES_LIBRARIES})
 target_link_libraries(camera_gpu_models ${Boost_LIBRARIES} ${OpenCV_LIBS} ${CERES_LIBRARIES})

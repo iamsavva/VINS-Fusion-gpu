@@ -62,9 +62,3 @@ target_link_libraries(vin_s_gpu_lib ${OpenCV_LIBS} ${catkin_LIBRARIES}  ${CERES_
 add_executable(vin_s_gpu_node src/rosNodeTest.cpp)
 target_link_libraries(vin_s_gpu_node vin_s_gpu_lib) 
 
-add_executable(kitti_odom_test src/KITTIOdomTest.cpp)
-target_link_libraries(kitti_odom_test vin_s_gpu_lib) 
-
-add_executable(kitti_gps_test src/KITTIGPSTest.cpp)
-target_link_libraries(kitti_gps_test vin_s_gpu_lib) 
-
